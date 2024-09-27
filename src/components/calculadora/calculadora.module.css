@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: initial;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  font-family: "Dosis", sans-serif;
+  font-display: swap;
+  height: 100vh;
+  justify-content: center;
+}
+
+.wrapper {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #232323;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 225, 0.34);
+  flex-basis: 400px;
+  height: 540px;
+  padding: 20px 35px;
+  transition: all 0.3s ease;
+}
+
+.screen {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 225, 0.01);
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #232323;
+  font-size: 2.25rem;
+  overflow: auto;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-align: right;
+  width: 90%;
+}
+
+.calc-button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+.calc-button {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 225, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #232323;
+  flex-basis: 20%;
+  font-family: inherit;
+  font-size: 1.75rem;
+  height: 65px;
+  transition: all 0.2s linear;
+}
+
+.calc-button:last-child {
+  background: #d72880;
+  color: #fff;
+}
+
+.calc-button:hover {
+  background-color: inherit;
+}
+
+.calc-button:active {
+  background-color: #ffef78;
+}
+
+.double {
+  flex-basis: 47%;
+}
+
+.triple {
+  flex-basis: 47%;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-basis: 320px;
+    height: 480px;
+    padding: 15px 25px;
+  }
+
+  .screen {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .calc-button {
+    font-size: 1.5rem;
+    height: 55px;
+  }
+
+  .calc-button-row {
+    margin: 4% 0;
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .wrapper {
+    flex-basis: 260px;
+    height: 400px;
+    padding: 10px 20px;
+  }
+
+  .screen {
+    font-size: 1.75rem;
+    padding: 5px 15px;
+  }
+
+  .calc-button {
+    font-size: 1.25rem;
+    height: 45px;
+  }
+
+  .double {
+    flex-basis: 45%;
+  }
+
+  .triple {
+    flex-basis: 65%;
+  }
+}
